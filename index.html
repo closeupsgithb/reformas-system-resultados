@@ -1,0 +1,1185 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>+Reformas System — Resultados</title>
+<meta name="description" content="Cómo funciona +Reformas System, conversaciones reales y casos con captura para empresas de reformas, construcción, arquitectura e interiorismo.">
+
+<!--
+  ============================================================================
+  CHECKLIST ANTES DE PUBLICAR
+
+  0. BUG CRÍTICO CORREGIDO (15 sept): faltaba por completo la definición
+     @keyframes marquee-scroll en el CSS. Por eso NINGÚN desplazamiento
+     lateral (logos, muro, carrusel de casos reales) se movía nunca, en
+     ningún navegador — no era un problema de caché ni de diseño. Ya está
+     añadida (justo antes de .marquee-track) y las tres animaciones
+     funcionan y se ven en movimiento, verificado.
+
+  1. HERO: restaurado igual que estaba (tarjeta editorial + 4 cifras +
+     marco de logos con desplazamiento lateral, ~3s por logo). El [Nº] de
+     "empresas usando el sistema ahora mismo" ya no aparece porque esa
+     cifra se sustituyó por las 4 fijas (+45, +2,3M€, +1.200, 2 oficinas) —
+     si quieres esa otra cifra en vez de estas, dímelo. Titular y subtítulo
+     actualizados (16 sept): "Esto es lo que pasa cuando el sistema está
+     instalado" (sustituyó a una versión intermedia, "Está en marcha...",
+     que no gustó) + "Conversaciones y proyectos generados para empresas de
+     reformas mediante un sistema de captación, cualificación y seguimiento
+     automático."
+
+  2. MURO "Así empiezan las conversaciones": restaurado a la versión con
+     2 filas de conversaciones RECREADAS (8 en total, 4 por fila, en bucle),
+     cabecera centrada con badge "El muro de conversaciones", y pausa al
+     pasar el ratón por encima (además del arrastre). Las 5 capturas reales
+     que estaban en la fila 2 (testimonio-cliente-1, fran, otra-cocina,
+     maria-perez, calle-lerez) se han quitado de esta sección a petición
+     expresa — ya NO aparecen en ningún sitio de la página. Siguen en
+     assets/whatsapp/ por si se quieren reintroducir en otra sección más
+     adelante. Para añadir más conversaciones recreadas, duplica un bloque
+     .wc-clip en la fila correspondiente y en su pasada duplicada.
+
+  3. CASOS REALES: cabecera centrada con badge, mismo estilo que el muro.
+     Fichas principales, formato "avatar/logo + 3 métricas en columna + cita",
+     versión pedida como definitiva (15 sept):
+       - Ficha 1: Paula · PladuAstur — logo real de PladuAstur en vez de
+         iniciales (assets/logos/pladuastur.png). 3 métricas reales sin
+         cambios (3 reformas cerradas, 150.000 €, 1 mes) + cita: "Pasó de
+         depender de las recomendaciones a generar entre 3 y 5 reformas al
+         mes en automático." + vídeo testimonio.
+       - Ficha 2: Marc · Impernova TPO (ya no dice "Selección de personal").
+         Logo real añadido: lo recorté de "foto impernova.jpg" (un
+         composite "Impernova TPO × Closeup" que ya tenías en Descargas) →
+         assets/logos/impernova.png. Métricas reales: 2 proyectos grandes de
+         impermeabilización, 3 meses de periodo, 350.000 € de facturación
+         extra + cita: "2 proyectos de impermeabilización de gran tamaño
+         obligaron a Marc a contratar más personal." La captura de evidencia
+         ya no va embebida en la ficha — hay un botón "Ver caso" (mismo
+         formato que "Ver testimonio en vídeo") que abre un modal con la
+         misma cita + la captura real. Captura del modal ampliada (16 sept),
+         ahora se lee mucho mejor.
+     MINI-EJEMPLOS (16 sept, 3ª pasada): 7 mini-tarjetas en un carril
+     desplazable en bucle (arrastrable + pausa al ratón), 65s por vuelta,
+     ritmo similar al carrusel de capturas (90s). Ronda de ajustes:
+       - Marta Ibáñez → empresa "Norhabitat Reformas" (antes "Reformas
+         Ibáñez"); texto sin "sin mover un dedo" (sonaba poco creíble) →
+         ahora "...de forma constante."
+       - Laura Campos → empresa "ObraLevante Construcciones" (antes "Campos
+         Construcciones").
+       - Diego Herrera → empresa "Edifica Norte" (antes "Herrera
+         Construcciones"); texto ya decía "2 proyectos de obra nueva en los
+         primeros 90 días".
+       - Sara Domínguez → empresa "Construye & Habita" (antes "Estudio
+         Lumen Interiorismo"); quité la combinación interiorismo+80.000€
+         (sonaba rara) → ahora reformas integrales, +35.000 € de media.
+       - Javier Molina · Cocinas Molina y Elena Vidal · Vidal
+         Rehabilitaciones: se quedan con nombre tipo apellido (solo 2 de 7,
+         para mantener variedad "informal" como pediste).
+       - Rubén Castillo · Construnova Obra Civil: sin cambios de contenido,
+         solo corregí el avatar (ponía "CN" en vez de "RC").
+     CONFIRMADO POR TI (te pregunté por el riesgo y decidiste seguir
+     adelante igualmente, así que lo apliqué tal cual):
+       - Añadida 8ª ficha: "Stenton Baulieu · Interiorismo" — cliente REAL
+         (su logo ya está en el carrusel superior) con cifra INVENTADA
+         (+18.000 € de media). No tiene ningún dato real confirmado en la
+         página, pero si Stenton Baulieu ve esto, verá un resultado que no
+         dijo ni confirmó.
+       - Ficha de Elena Vidal renombrada a "Paula · PladuAstur" — incluye
+         una cifra DISTINTA (+150.000 € por un edificio) de las 3 métricas
+         reales que su ficha principal ya muestra más arriba (3 reformas,
+         150.000 € en presupuestos, 1 mes). Un visitante atento puede notar
+         la contradicción entre ambas cifras para el mismo nombre.
+     ⚠️ Los 8 ejemplos de este carril siguen siendo INVENTADOS a petición
+     expresa tuya — pero 2 de ellos (Stenton Baulieu y Paula/PladuAstur)
+     ahora usan nombres de clientes REALES con resultados que no confirmaron
+     — revísalo con calma antes de publicar. Lo dejo marcado con un
+     comentario HTML en el propio código por si se te olvida.
+     Carrusel inferior: quité el logo de Renovare (a petición) y añadí las
+     capturas reales de Alejandro, María Pérez, Fran, Cliente (2 proyectos),
+     Otra cocina y Calle Lerez — todas ya las tenía guardadas en
+     assets/whatsapp/ de rondas anteriores (comprobé por checksum que los 4
+     archivos que adjuntaste esta vez — TESTIMONIO 5/6, testimonio 8/9 — son
+     bit a bit idénticos a las que ya tenía, así que no hizo falta copiar
+     nada nuevo). Ahora son 8 capturas reales en el carrusel (antes 2).
+     Velocidad del carrusel reducida (22s → 70s) para dar tiempo a leer las
+     capturas. Cita en ambas fichas ampliada de tamaño y centrada
+     verticalmente para llenar el hueco de la tarjeta. Quitada también la
+     línea "También están en Google" del CTA final (redundante con "Ver más
+     opiniones" de más arriba).
+     Debajo del carrusel añadí "Ver más opiniones →", enlaza a la misma
+     ficha de Google que ya usábamos en el CTA final, sin mencionar "Google"
+     en el texto visible.
+
+  4. VÍDEO DE PAULA: vive oculto en el modal (#videoModal), enlazado desde
+     el botón "Ver testimonio en vídeo" de la ficha de PladuAstur. No carga
+     hasta que se abre el modal. Archivo real: assets/video/testimonio-paula.mp4.
+
+  5. ENLACES DE WHATSAPP: el CTA final ya usa el número real
+     (34697529195) con los dos mensajes prellenados pedidos.
+  ============================================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --orange:#ff4e08;
+    --orange-dark:#d93e00;
+    --mist:#f1f2f7;
+    --mist-soft:#f7f8fb;
+    --ink:#0a0a0a;
+    --ink-soft:#17171b;
+    --white:#ffffff;
+    --line: rgba(10,10,10,.1);
+    --line-soft: rgba(10,10,10,.06);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  [id]{scroll-margin-top:6rem;}
+  body{
+    margin:0;
+    background:var(--mist);
+    color:var(--ink);
+    font-family:'Albert Sans','Segoe UI',Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+
+  .container{width:100%;max-width:75rem;margin-inline:auto;padding-inline:1.25rem;}
+  @media (min-width:768px){ .container{padding-inline:2.5rem;} }
+  @media (min-width:1280px){ .container{padding-inline:3rem;} }
+
+  .eyebrow{
+    text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;font-weight:700;
+    color:rgba(10,10,10,.45);
+  }
+  .eyebrow.on-dark{color:rgba(255,255,255,.7);}
+  .eyebrow.on-orange{color:rgba(10,10,10,.55);}
+
+  h1,h2,h3{margin:0;font-weight:800;letter-spacing:-.03em;line-height:1.02;}
+  .display{font-weight:800;letter-spacing:-.035em;line-height:.98;}
+
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+    font-weight:600;padding:.9rem 1.75rem;border-radius:999px;
+    transition:transform .25s cubic-bezier(.16,1,.3,1), background-color .25s ease, color .25s ease;
+    font-size:.95rem;border:none;cursor:pointer;
+  }
+  .btn-primary{background:var(--orange);color:#fff;}
+  .btn-primary:hover{background:var(--ink);transform:translateY(-2px);}
+  .btn-secondary{background:transparent;color:var(--ink);border:1.5px solid var(--ink);}
+  .btn-secondary:hover{background:var(--ink);color:#fff;transform:translateY(-2px);}
+  .btn-on-orange{background:#fff;color:var(--orange-dark);border:none;}
+  .btn-on-orange:hover{background:var(--ink);color:#fff;transform:translateY(-2px);}
+
+  /* ---------------- hero (tarjeta editorial estilo GrowthMastery) ---------------- */
+  .hero{padding-block:3rem 2.5rem;}
+  @media (min-width:768px){ .hero{padding-block:4rem 3rem;} }
+  .hero-card{
+    position:relative;max-width:78rem;margin-inline:auto;background:#fff;
+    border:1px solid var(--line);border-radius:1.75rem;overflow:hidden;
+    padding:2.75rem 1.75rem 2.5rem;text-align:center;
+    box-shadow:0 40px 70px -45px rgba(10,10,10,.25);
+  }
+  @media (min-width:768px){ .hero-card{padding:3.5rem 4rem 3.25rem;} }
+  .hero-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--orange);}
+  .hero-logo{display:flex;align-items:center;justify-content:center;gap:.55rem;margin-bottom:2rem;}
+  .hero-logo img{height:18px;width:auto;}
+  .hero-logo .div{width:1px;height:15px;background:var(--line);}
+  .hero-logo .badge{width:19px;height:19px;border-radius:5.5px;background:var(--orange);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;flex:none;}
+  .hero-logo .word{font-size:.8rem;font-weight:800;letter-spacing:-.01em;color:var(--ink);}
+  .hero-pill{
+    display:inline-block;font-size:.66rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--orange-dark);background:#fff1ea;border:1px solid #ffd2bd;border-radius:999px;
+    padding:.45rem 1.05rem;margin-bottom:1.6rem;
+  }
+  .hero h1{font-size:1.75rem;max-width:40rem;margin-inline:auto;line-height:1.15;font-weight:800;letter-spacing:-.03em;color:var(--ink);margin-top:0;}
+  @media (min-width:640px){ .hero h1{font-size:2.35rem;} }
+  @media (min-width:1024px){ .hero h1{font-size:2.7rem;} }
+  .hero h1 em{
+    font-style:italic;font-weight:500;color:rgba(10,10,10,.52);
+    font-family:Georgia,'Iowan Old Style','Times New Roman',serif;
+  }
+  .hero .sub{margin-top:1.4rem;max-width:33rem;margin-inline:auto;font-size:1rem;line-height:1.6;color:rgba(10,10,10,.62);}
+
+  .stat-strip{margin-top:1.75rem;display:grid;grid-template-columns:repeat(2,1fr);gap:1px;
+    max-width:78rem;margin-inline:auto;
+    background:var(--line);border:1px solid var(--line);border-radius:1.25rem;overflow:hidden;}
+  @media (min-width:640px){ .stat-strip{grid-template-columns:repeat(4,1fr);} }
+  .stat-strip .stat{background:#fff;padding:1.4rem 1.1rem;text-align:center;}
+  .stat-strip .stat .num{font-size:1.5rem;font-weight:800;letter-spacing:-.02em;color:var(--ink);}
+  @media (min-width:640px){ .stat-strip .stat .num{font-size:1.9rem;} }
+  .stat-strip .stat .lbl{margin-top:.35rem;font-size:.78rem;color:rgba(10,10,10,.55);line-height:1.35;}
+
+  /* ---------------- marco de logos ---------------- */
+  .logos{padding-block:1.5rem;border-block:1px solid var(--line-soft);}
+  @media (min-width:768px){ .logos{padding-block:2.75rem;} }
+  .logos .eyebrow{text-align:center;margin-bottom:1.25rem;}
+  .marquee-mask{overflow:hidden;
+    -webkit-mask-image:linear-gradient(90deg,transparent,black 8%,black 92%,transparent);
+    mask-image:linear-gradient(90deg,transparent,black 8%,black 92%,transparent);}
+  @keyframes marquee-scroll{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
+  .marquee-track{display:flex;width:max-content;animation:marquee-scroll 30s linear infinite;}
+  .marquee-track:hover{animation-play-state:paused;}
+  .marquee-track .item{flex:none;height:3.6rem;padding-inline:2rem;display:flex;align-items:center;justify-content:center;}
+  .marquee-track .item img{max-height:2.1rem;width:auto;object-fit:contain;filter:grayscale(1);opacity:.75;}
+
+  /* ---------------- cabecera mínima (fallback, sin uso actual) ---------------- */
+  header.site-min{padding-block:1.75rem;text-align:center;}
+  header.site-min .lockup{display:flex;align-items:center;justify-content:center;gap:.5rem;}
+  header.site-min img{height:18px;width:auto;}
+  header.site-min .div{width:1px;height:15px;background:var(--line);}
+  header.site-min .badge{width:19px;height:19px;border-radius:5.5px;background:var(--orange);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;flex:none;}
+  header.site-min .word{font-size:.8rem;font-weight:800;letter-spacing:-.01em;color:var(--ink);}
+
+  /* ---------------- cómo funciona por dentro (demo animada) ---------------- */
+  .section .head .kicker{margin-top:.6rem;font-size:.92rem;font-style:italic;color:rgba(10,10,10,.5);font-weight:600;}
+  .how-grid{margin-top:2.75rem;display:grid;grid-template-columns:1fr;gap:1.25rem;}
+  @media (min-width:860px){ .how-grid{grid-template-columns:repeat(3,1fr);} }
+  .how-card{background:#fff;border:1px solid var(--line);border-radius:1.25rem;padding:1.75rem;
+    display:flex;flex-direction:column;height:100%;}
+  .how-card .visual{flex:1;min-height:13.5rem;display:flex;align-items:center;justify-content:center;padding:.5rem 0 1.25rem;}
+  .how-card h3{font-size:1.05rem;font-weight:800;letter-spacing:-.01em;}
+  .how-card p{margin-top:.4rem;font-size:.88rem;line-height:1.5;color:rgba(10,10,10,.6);}
+
+  /* card 1 — captación */
+  .social-icons{position:relative;display:flex;align-items:center;gap:1rem;color:rgba(10,10,10,.75);}
+  .social-icons .circle{width:3.6rem;height:3.6rem;border-radius:50%;border:2px solid var(--ink);background:#fff;
+    display:flex;align-items:center;justify-content:center;}
+  .social-icons .badge{position:absolute;top:-.3rem;right:-.6rem;width:1.7rem;height:1.7rem;border-radius:50%;
+    background:var(--orange);color:#fff;display:flex;align-items:center;justify-content:center;}
+
+  /* card 2 — cualificación por WhatsApp */
+  .phone-demo{position:relative;width:13rem;height:18.5rem;border-radius:1.4rem;border:2px solid var(--ink);
+    background:#fff;overflow:hidden;box-shadow:0 14px 30px -14px rgba(10,10,10,.3);}
+  .phone-demo .notch{position:absolute;top:.45rem;left:50%;transform:translateX(-50%);width:2.6rem;height:.3rem;
+    border-radius:999px;background:rgba(10,10,10,.18);}
+  .phone-demo .thread{position:absolute;inset:1.1rem 1.3rem 1.5rem .6rem;display:flex;flex-direction:column;justify-content:flex-end;gap:.35rem;}
+  .phone-demo .bubble{max-width:85%;padding:.38rem .55rem;border-radius:.75rem;font-size:.58rem;line-height:1.35;
+    font-weight:600;opacity:0;animation:bubbleIn 12s ease-in-out infinite;}
+  .phone-demo .bubble.in{align-self:flex-start;background:var(--mist-soft);border:1px solid var(--line);
+    color:var(--ink);border-bottom-left-radius:.2rem;}
+  .phone-demo .bubble.out{align-self:flex-end;background:var(--orange);color:#fff;border-bottom-right-radius:.2rem;}
+  .phone-demo .b1{animation-delay:0s;}
+  .phone-demo .b2{animation-delay:2.2s;}
+  .phone-demo .b3{animation-delay:4.4s;}
+  .phone-demo .b4{animation-delay:6.6s;}
+  .phone-demo .b5{animation-delay:8.8s;}
+  .phone-demo .wa-badge{position:absolute;bottom:-.5rem;right:-.5rem;width:2.1rem;height:2.1rem;border-radius:50%;
+    background:#25D366;border:2px solid #fff;display:flex;align-items:center;justify-content:center;
+    box-shadow:0 3px 8px rgba(10,10,10,.2);}
+  @keyframes bubbleIn{
+    0%{opacity:0;transform:translateY(6px);}
+    6%{opacity:1;transform:translateY(0);}
+    72%{opacity:1;transform:translateY(0);}
+    82%,100%{opacity:0;transform:translateY(0);}
+  }
+
+  /* card 3 — pipeline / CRM */
+  .pipeline-demo{width:100%;}
+  .pipeline-demo .col-labels{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin-bottom:.55rem;}
+  .pipeline-demo .col-labels span{font-size:.62rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;
+    color:rgba(10,10,10,.4);text-align:center;}
+  .pipeline-demo .track{position:relative;height:7.8rem;}
+  .pipeline-demo .col-bg{position:absolute;top:0;bottom:0;border-radius:.7rem;border:1px solid var(--line);
+    background:var(--mist-soft);transition:background .5s ease, border-color .5s ease;}
+  .pipeline-demo .col-bg.c0{left:0;width:calc(33.333% - .35rem);animation:colHL0 9s ease-in-out infinite;}
+  .pipeline-demo .col-bg.c1{left:calc(33.333% + .18rem);width:calc(33.333% - .35rem);animation:colHL1 9s ease-in-out infinite;}
+  .pipeline-demo .col-bg.c2{left:calc(66.666% + .35rem);width:calc(33.333% - .35rem);animation:colHL2 9s ease-in-out infinite;}
+  .pipeline-demo .card{position:absolute;top:.7rem;width:27%;background:#fff;border:1px solid var(--orange);
+    border-radius:.55rem;padding:.5rem .3rem;text-align:center;box-shadow:0 6px 14px -6px rgba(10,10,10,.18);}
+  .pipeline-demo .card .n{display:block;font-size:.66rem;font-weight:700;color:rgba(10,10,10,.75);}
+  .pipeline-demo .card .a{display:block;font-size:.66rem;font-weight:800;color:var(--orange-dark);margin-top:.1rem;}
+  .pipeline-demo .card.pa{animation:pipelineA 9s ease-in-out infinite;}
+  .pipeline-demo .card.pb{animation:pipelineB 9s ease-in-out infinite;}
+  @keyframes pipelineA{ 0%,27%{left:4%;} 33%,60%{left:36.5%;} 66%,93%{left:69%;} 100%{left:4%;} }
+  @keyframes pipelineB{ 0%,27%{left:36.5%;} 33%,60%{left:69%;} 66%,93%{left:4%;} 100%{left:36.5%;} }
+  @keyframes colHL0{
+    0%,27%{background:#fff1ea;border-color:#ffbf9e;}
+    33%,60%{background:var(--mist-soft);border-color:var(--line);}
+    66%,93%{background:#fff1ea;border-color:#ffbf9e;}
+    100%{background:#fff1ea;border-color:#ffbf9e;}
+  }
+  @keyframes colHL1{
+    0%,27%{background:#fff1ea;border-color:#ffbf9e;}
+    33%,60%{background:#fff1ea;border-color:#ffbf9e;}
+    66%,93%{background:var(--mist-soft);border-color:var(--line);}
+    100%{background:#fff1ea;border-color:#ffbf9e;}
+  }
+  @keyframes colHL2{
+    0%,27%{background:var(--mist-soft);border-color:var(--line);}
+    33%,60%{background:#fff1ea;border-color:#ffbf9e;}
+    66%,93%{background:#fff1ea;border-color:#ffbf9e;}
+    100%{background:var(--mist-soft);border-color:var(--line);}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .phone-demo .bubble{animation:none;opacity:1;}
+    .pipeline-demo .card{animation:none;}
+    .pipeline-demo .card.pa{left:4%;}
+    .pipeline-demo .card.pb{left:36.5%;}
+    .pipeline-demo .col-bg{animation:none;}
+  }
+
+  /* ---------------- section heading ---------------- */
+  .section{padding-block:3.5rem;}
+  @media (min-width:768px){ .section{padding-block:6rem;} }
+  .section .head{max-width:38rem;}
+  .section .head h2{font-size:1.7rem;}
+  @media (min-width:640px){ .section .head h2{font-size:2.2rem;} }
+  .section .head p{margin-top:.9rem;font-size:1.02rem;line-height:1.6;color:rgba(10,10,10,.62);}
+  @media (min-width:640px){ .section .head h2.one-line{white-space:nowrap;font-size:1.85rem;} }
+  @media (min-width:1024px){ .section .head h2.one-line{font-size:2.2rem;} }
+
+  /* ---------------- muro de conversaciones (superficie WhatsApp) ---------------- */
+  .wall-surface{
+    position:relative;margin-top:2.5rem;border-radius:1.5rem;border:1px solid var(--line);
+    overflow:hidden;background:#e9e3d6;
+    background-image:radial-gradient(rgba(10,10,10,.04) 1px, transparent 1px);
+    background-size:20px 20px;
+    box-shadow:0 25px 55px -30px rgba(10,10,10,.3);
+  }
+  .wall-watermark{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-8deg);
+    font-size:3.5rem;font-weight:800;letter-spacing:-.02em;color:rgba(10,10,10,.045);
+    white-space:nowrap;pointer-events:none;user-select:none;z-index:1;
+  }
+  .wall-viewport{position:relative;overflow:hidden;padding-block:1.75rem;cursor:grab;touch-action:pan-y;}
+  .wall-viewport.dragging{cursor:grabbing;}
+  .wall-drag{will-change:transform;}
+  .wall-track{display:flex;align-items:flex-start;width:max-content;gap:0;
+    animation:marquee-scroll 55s linear infinite;}
+  .wall-track.row2{animation-duration:68s;animation-direction:reverse;margin-top:1.5rem;}
+  .wall-viewport:hover .wall-track{animation-play-state:paused;}
+  .wc-clip{
+    flex:none;width:15.5rem;padding:0 1.75rem;border-right:1px solid rgba(10,10,10,.08);
+    display:flex;flex-direction:column;gap:.35rem;position:relative;z-index:2;
+  }
+  @media (min-width:640px){ .wc-clip{width:17rem;} }
+  .wc-bubble{
+    position:relative;max-width:92%;padding:.5rem .75rem .65rem;border-radius:.7rem;
+    font-size:.82rem;line-height:1.42;color:#111;box-shadow:0 1px 1px rgba(10,10,10,.08);
+  }
+  .wc-bubble.in{align-self:flex-start;background:#fff;border-bottom-left-radius:.15rem;}
+  .wc-bubble.out{align-self:flex-end;background:#dcf8c6;border-bottom-right-radius:.15rem;}
+  .wc-time{display:block;margin-top:.2rem;font-size:.64rem;color:rgba(10,10,10,.4);text-align:right;}
+  .wall-disclaimer{margin-top:1.25rem;font-size:.8rem;color:rgba(10,10,10,.45);line-height:1.55;max-width:38rem;}
+
+  @media (prefers-reduced-motion: reduce){
+    .wall-track{animation:none;}
+  }
+
+  /* ---------------- casos reales: 2 fichas principales ---------------- */
+  .main-cases{margin-top:2.75rem;display:grid;grid-template-columns:1fr;gap:1.25rem;}
+  @media (min-width:820px){ .main-cases{grid-template-columns:repeat(2,1fr);} }
+  .main-case{background:#fff;border:1px solid var(--line);border-radius:1.25rem;padding:1.75rem;
+    display:flex;flex-direction:column;height:100%;}
+  .main-case .mc-person{display:flex;align-items:center;gap:.85rem;}
+  .main-case .mc-avatar{flex:none;display:flex;align-items:center;justify-content:center;}
+  .main-case .mc-avatar.mc-avatar-text{width:2.75rem;height:2.75rem;border-radius:.7rem;background:#fff1ea;
+    color:var(--orange-dark);font-weight:800;font-size:.88rem;letter-spacing:.01em;}
+  .main-case .mc-avatar.mc-avatar-logo{height:2.4rem;padding:.3rem .5rem;border-radius:.6rem;
+    background:var(--mist-soft);border:1px solid var(--line-soft);}
+  .main-case .mc-avatar.mc-avatar-logo img{height:100%;width:auto;max-width:6rem;object-fit:contain;}
+  .main-case .mc-title{font-size:.95rem;font-weight:700;color:var(--ink);}
+  .main-case .mc-loc{font-size:.8rem;color:rgba(10,10,10,.5);margin-top:.1rem;}
+  .main-case .mc-loc .ph{color:var(--orange-dark);font-weight:700;border-bottom:1.5px dashed #ffbf9e;}
+  .main-case .mc-metrics-row{margin-top:1.4rem;display:flex;gap:1.25rem;}
+  .main-case .mc-metric-col{flex:1;min-width:0;display:flex;flex-direction:column;gap:.3rem;}
+  .main-case .mc-metric-col .num{font-size:1.15rem;font-weight:800;color:var(--ink);letter-spacing:-.01em;}
+  .main-case .mc-metric-col .num.ph{color:var(--orange-dark);border-bottom:1.5px dashed #ffbf9e;display:inline-block;}
+  .main-case .mc-metric-col .label{font-size:.62rem;font-weight:700;letter-spacing:.05em;
+    text-transform:uppercase;color:rgba(10,10,10,.45);}
+  .main-case .mc-quote{margin-top:1.4rem;flex:1;display:flex;align-items:center;
+    font-size:1.08rem;line-height:1.5;font-style:italic;font-weight:500;color:rgba(10,10,10,.75);}
+  .main-case .video-link{margin-top:1.1rem;display:inline-flex;align-items:center;gap:.4rem;
+    font-size:.82rem;font-weight:700;color:var(--orange-dark);align-self:flex-start;}
+  .main-case .video-link:hover{color:var(--ink);}
+
+  /* ---------------- casos reales: mini-ejemplos ilustrativos ---------------- */
+  .mini-wrap{margin-top:1.25rem;border-radius:1.25rem;border:1px solid var(--line);overflow:hidden;background:var(--mist-soft);}
+  .mini-viewport{overflow:hidden;padding-block:1.25rem;cursor:grab;touch-action:pan-y;}
+  .mini-viewport.dragging{cursor:grabbing;}
+  .mini-drag{will-change:transform;}
+  .mini-track{display:flex;align-items:stretch;width:max-content;gap:1.1rem;padding-inline:1.5rem;
+    animation:marquee-scroll 65s linear infinite;}
+  .mini-viewport:hover .mini-track{animation-play-state:paused;}
+  @media (prefers-reduced-motion: reduce){ .mini-track{animation:none;} }
+  .mini-card{flex:none;width:19rem;background:#fff;border:1px solid var(--line);border-radius:1rem;padding:1.25rem;}
+  .mini-head{display:flex;align-items:center;gap:.65rem;}
+  .mini-avatar{flex:none;width:2.2rem;height:2.2rem;border-radius:.55rem;background:#fff1ea;
+    color:var(--orange-dark);display:flex;align-items:center;justify-content:center;
+    font-weight:800;font-size:.72rem;}
+  .mini-name{font-size:.85rem;font-weight:700;color:var(--ink);}
+  .mini-company{font-size:.74rem;color:rgba(10,10,10,.5);}
+  .mini-text{margin-top:.85rem;font-size:.85rem;line-height:1.5;color:rgba(10,10,10,.68);}
+  .mini-text strong{color:var(--orange-dark);font-weight:800;}
+
+  /* ---------------- casos reales: carrusel de resultados ---------------- */
+  .results-wrap{margin-top:1.5rem;border-radius:1.25rem;border:1px solid var(--line);overflow:hidden;background:#fff;}
+  .results-viewport{overflow:hidden;padding-block:1.25rem;cursor:grab;touch-action:pan-y;}
+  .results-viewport.dragging{cursor:grabbing;}
+  .results-drag{will-change:transform;}
+  .results-track{display:flex;align-items:center;width:max-content;gap:1.25rem;padding-inline:1.5rem;
+    animation:marquee-scroll 90s linear infinite;}
+  .results-viewport:hover .results-track{animation-play-state:paused;}
+  .rc-item{flex:none;}
+  .rc-item > img{height:7rem;width:auto;max-width:none;border-radius:.6rem;border:1px solid var(--line);box-shadow:0 6px 16px -10px rgba(10,10,10,.25);}
+  @media (min-width:640px){ .rc-item > img{height:8.5rem;} }
+  @media (min-width:1024px){ .rc-item > img{height:9.5rem;} }
+  .rc-item .rc-tag{margin-top:.5rem;font-size:.72rem;font-weight:700;color:rgba(10,10,10,.55);}
+  @media (prefers-reduced-motion: reduce){ .results-track{animation:none;} }
+  .more-opinions{margin-top:1.25rem;text-align:center;}
+  .more-opinions a{font-size:.85rem;font-weight:700;color:var(--orange-dark);}
+  .more-opinions a:hover{color:var(--ink);}
+
+  /* ---------------- botón discreto de vídeo ---------------- */
+  .video-link-btn{
+    margin-top:1.1rem;display:inline-flex;align-items:center;gap:.5rem;background:transparent;
+    border:1.5px solid var(--line);color:var(--ink);font-weight:600;font-size:.85rem;
+    padding:.65rem 1.2rem;border-radius:999px;cursor:pointer;transition:border-color .2s ease, background .2s ease;
+  }
+  .video-link-btn:hover{border-color:var(--ink);background:var(--mist-soft);}
+  .video-link-btn .play-ico{width:1.3rem;height:1.3rem;border-radius:50%;background:var(--orange);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-size:.6rem;flex:none;}
+
+  /* ---------------- modal de vídeo ---------------- */
+  .video-modal{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:1.25rem;}
+  .video-modal[hidden]{display:none;}
+  .video-modal-backdrop{position:absolute;inset:0;background:rgba(10,10,10,.72);}
+  .video-modal-panel{position:relative;width:100%;max-width:52rem;background:#000;border-radius:1.25rem;overflow:hidden;
+    box-shadow:0 40px 80px -20px rgba(0,0,0,.5);}
+  .video-modal-panel video{width:100%;aspect-ratio:16/9;display:block;background:#000;}
+  .video-modal-close{
+    position:absolute;top:.75rem;right:.75rem;z-index:2;width:2.25rem;height:2.25rem;border-radius:50%;
+    background:rgba(255,255,255,.92);border:none;font-size:1rem;cursor:pointer;color:var(--ink);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .video-modal-close:hover{background:#fff;}
+
+  /* ---------------- modal de caso (texto + captura) ---------------- */
+  .case-modal{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:1.25rem;}
+  .case-modal[hidden]{display:none;}
+  .case-modal-backdrop{position:absolute;inset:0;background:rgba(10,10,10,.72);}
+  .case-modal-panel{position:relative;width:100%;max-width:46rem;background:#fff;border-radius:1.25rem;
+    overflow:hidden;padding:2.25rem 2rem 2rem;box-shadow:0 40px 80px -20px rgba(0,0,0,.5);}
+  .case-modal-close{
+    position:absolute;top:.75rem;right:.75rem;z-index:2;width:2.25rem;height:2.25rem;border-radius:50%;
+    background:var(--mist-soft);border:none;font-size:1rem;cursor:pointer;color:var(--ink);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .case-modal-close:hover{background:var(--line-soft);}
+  .case-modal-text{font-size:1.05rem;line-height:1.55;font-style:italic;font-weight:500;
+    color:rgba(10,10,10,.78);padding-right:1.5rem;}
+  .case-modal-evidence{margin-top:1.25rem;border-radius:.8rem;overflow-x:auto;overflow-y:hidden;
+    border:1px solid var(--line);-webkit-overflow-scrolling:touch;}
+  .case-modal-evidence img{height:14rem;width:auto;max-width:none;display:block;}
+  @media (min-width:640px){ .case-modal-evidence img{height:17rem;} }
+
+  /* ---------------- final cta (oscuro, línea naranja) ---------------- */
+  .final-cta-wrap{padding-block:3.5rem 5rem;}
+  .final-cta{
+    border-radius:2rem;background:var(--ink);border:1px solid rgba(255,255,255,.08);
+    padding:3.25rem 1.75rem;text-align:center;position:relative;overflow:hidden;
+  }
+  @media (min-width:768px){ .final-cta{padding:4.5rem 4rem;} }
+  .final-cta::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--orange);}
+  .final-cta .inner{position:relative;}
+  .final-cta .eyebrow{color:rgba(255,255,255,.5);}
+  .final-cta h2{color:#fff;font-size:1.9rem;max-width:32rem;margin-inline:auto;margin-top:.75rem;}
+  @media (min-width:640px){ .final-cta h2{font-size:2.4rem;} }
+  .final-cta p{margin-top:1rem;color:rgba(255,255,255,.7);max-width:30rem;margin-inline:auto;font-size:1rem;line-height:1.55;}
+  .final-cta .cta-row{margin-top:2rem;display:flex;flex-wrap:wrap;gap:.9rem;justify-content:center;}
+  .final-cta .btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.45);}
+  .final-cta .btn-ghost:hover{background:#fff;color:var(--ink);}
+
+  /* ---------------- footer ---------------- */
+  footer.site{padding-block:2.5rem;}
+  footer.site .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;align-items:center;
+    font-size:.8rem;color:rgba(10,10,10,.5);}
+  footer.site a:hover{color:var(--ink);}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-card">
+      <div class="hero-logo">
+        <img src="assets/brand/wordmark-black.png" alt="Closeup Marketing">
+        <span class="div"></span>
+        <span class="badge" aria-hidden="true">+</span>
+        <span class="word">Reformas System</span>
+      </div>
+      <p class="hero-pill">Resultados reales · +Reformas System</p>
+      <h1>Esto es lo que pasa cuando <em>el sistema está instalado</em></h1>
+      <p class="sub">Conversaciones y proyectos generados para empresas de reformas mediante un sistema de captación, cualificación y seguimiento automático.</p>
+    </div>
+
+    <div class="stat-strip">
+      <div class="stat">
+        <div class="num">+45</div>
+        <div class="lbl">Empresas con las que hemos trabajado</div>
+      </div>
+      <div class="stat">
+        <div class="num">+2,3 M€</div>
+        <div class="lbl">Inversión gestionada en publicidad</div>
+      </div>
+      <div class="stat">
+        <div class="num">+1.200</div>
+        <div class="lbl">Anuncios y contenidos producidos</div>
+      </div>
+      <div class="stat">
+        <div class="num">2</div>
+        <div class="lbl">Oficinas</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="logos">
+  <div class="container">
+    <p class="eyebrow">Empresas de reformas que ya confían en el sistema</p>
+  </div>
+  <div class="marquee-mask">
+    <div class="marquee-track">
+      <!-- primera pasada (contenido real) + segunda pasada idéntica (para el loop) -->
+      <div class="item"><img src="assets/logos/pladuastur.png" alt="PladuAstur"></div>
+      <div class="item"><img src="assets/logos/stenton_baulieu.png" alt="Stenton Baulieu"></div>
+      <div class="item"><img src="assets/logos/evo_reformas.png" alt="EVO Reformas"></div>
+      <div class="item"><img src="assets/logos/gali_reformas.png" alt="Gali Reformas"></div>
+      <div class="item"><img src="assets/logos/renovare.png" alt="Renovare Design & Build"></div>
+      <div class="item"><img src="assets/logos/proworks.png" alt="Proworks"></div>
+      <div class="item"><img src="assets/logos/masquepintura.png" alt="MásQuePintura Fasan"></div>
+      <div class="item"><img src="assets/logos/tritec.png" alt="Tritec Reformas"></div>
+      <div class="item"><img src="assets/logos/aisprotec.png" alt="Aisprotec"></div>
+      <div class="item"><img src="assets/logos/reformare.png" alt="Reformare"></div>
+
+      <div class="item" aria-hidden="true"><img src="assets/logos/pladuastur.png" alt=""></div>
+      <div class="item" aria-hidden="true"><img src="assets/logos/stenton_baulieu.png" alt=""></div>
+      <div class="item" aria-hidden="true"><img src="assets/logos/evo_reformas.png" alt=""></div>
+      <div class="item" aria-hidden="true"><img src="assets/logos/gali_reformas.png" alt=""></div>
+      <div class="item" aria-hidden="true"><img src="assets/logos/renovare.png" alt=""></div>
+      <div class="item" aria-hidden="true"><img src="assets/logos/proworks.png" alt=""></div>
+      <div class="item" aria-hidden="true"><img src="assets/logos/masquepintura.png" alt=""></div>
+      <div class="item" aria-hidden="true"><img src="assets/logos/tritec.png" alt=""></div>
+      <div class="item" aria-hidden="true"><img src="assets/logos/aisprotec.png" alt=""></div>
+      <div class="item" aria-hidden="true"><img src="assets/logos/reformare.png" alt=""></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="como-funciona">
+  <div class="container">
+    <div class="head" style="text-align:center;margin-inline:auto;">
+      <p class="hero-pill">Cómo funciona por dentro</p>
+      <h2>Captación, conversación y seguimiento conectados en un mismo sistema</h2>
+      <p class="kicker">Sin llamadas innecesarias. Sin perder el tiempo.</p>
+    </div>
+
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="visual">
+          <div class="social-icons">
+            <span class="circle" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5.5" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4.3" stroke="currentColor" stroke-width="1.7"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg>
+            </span>
+            <span class="circle" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="currentColor" stroke-width="1.7"/><path d="M13.6 16.5v-4.2h1.6l.25-2.1h-1.85V8.9c0-.6.17-1 1.02-1h1.1V6c-.19-.03-.85-.08-1.6-.08-1.6 0-2.7.97-2.7 2.75v1.5H9.5v2.1h1.9v4.2h2.2Z" fill="currentColor"/></svg>
+            </span>
+            <span class="badge" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 10v4a1 1 0 001 1h1l1.6 5.4c.15.5.6.9 1.15.6.5-.27.7-.9.5-1.4L7 15h1l9 4V5l-9 4H4a1 1 0 00-1 1Z" stroke="white" stroke-width="1.4" stroke-linejoin="round"/><path d="M17 9.5a3.5 3.5 0 010 5" stroke="white" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </span>
+          </div>
+        </div>
+        <h3>Captación</h3>
+        <p>Anuncios con tu marca y en tu zona para atraer particulares que están valorando una reforma.</p>
+      </div>
+
+      <div class="how-card">
+        <div class="visual">
+          <div class="phone-demo">
+            <span class="notch"></span>
+            <div class="thread">
+              <span class="bubble in b1">Hola Sergio, por aquí Reformare Madrid 👋</span>
+              <span class="bubble in b2">Rellenaste tus datos para una reforma integral — solo por confirmar, ¿la vivienda está en Madrid?</span>
+              <span class="bubble out b3">Sí, en Chamberí</span>
+              <span class="bubble in b4">Genial. ¿Qué tiempos tienes en mente para empezar?</span>
+              <span class="bubble out b5">Antes de verano si puede ser</span>
+            </div>
+            <span class="wa-badge" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 3a9 9 0 00-7.75 13.6L3 21l4.53-1.19A9 9 0 1012 3Z" fill="white"/><path d="M8.6 7.8c.24-.53.5-.54.73-.55h.5c.16 0 .38-.06.6.46.24.58.8 2 .87 2.14.07.14.12.31.02.5-.09.19-.14.3-.28.46-.14.16-.29.36-.42.48-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.45.12.62-.07.16-.19.7-.81.89-1.09.19-.28.37-.23.63-.14.26.1 1.63.77 1.91.91.28.14.46.21.53.33.07.12.07.68-.17 1.34-.23.65-1.37 1.28-1.9 1.36-.48.08-1.09.11-1.76-.11-.4-.13-.92-.3-1.58-.59-2.79-1.21-4.6-4.02-4.74-4.21-.14-.19-1.14-1.52-1.14-2.9 0-1.38.72-2.05.98-2.33Z" fill="#25D366"/></svg>
+            </span>
+          </div>
+        </div>
+        <h3>Cualificación por WhatsApp</h3>
+        <p>Confirmamos qué quieren reformar, dónde se encuentra la vivienda y cuándo les gustaría empezar.</p>
+      </div>
+
+      <div class="how-card">
+        <div class="visual">
+          <div class="pipeline-demo" role="img" aria-label="Oportunidades moviéndose por el pipeline: Nuevo, Cita agendada y Presupuesto enviado">
+            <div class="col-labels"><span>Nuevo</span><span>Cita agendada</span><span>Presupuesto</span></div>
+            <div class="track">
+              <div class="col-bg c0"></div>
+              <div class="col-bg c1"></div>
+              <div class="col-bg c2"></div>
+              <div class="card pa"><span class="n">Paula R.</span><span class="a">8.500 €</span></div>
+              <div class="card pb"><span class="n">Marcos G.</span><span class="a">12.000 €</span></div>
+            </div>
+          </div>
+        </div>
+        <h3>Seguimiento en tu CRM</h3>
+        <p>Cada oportunidad queda organizada con su estado y próximo paso para que tu equipo pueda hacer seguimiento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="muro">
+  <div class="container">
+    <div class="head" style="text-align:center;margin-inline:auto;">
+      <p class="hero-pill">El muro de conversaciones</p>
+      <h2>Así empiezan las conversaciones que terminan en una visita</h2>
+      <p>Personas de tu zona explicando qué quieren reformar, dónde se encuentra la vivienda y cuándo les gustaría empezar. Pasan solas — deja que corran o pasa el ratón por encima para detenerlas y leerlas con calma.</p>
+    </div>
+
+    <div class="wall-surface">
+      <div class="wall-watermark" aria-hidden="true">+Reformas System</div>
+      <div class="wall-viewport" id="wallViewport">
+        <div class="wall-drag" id="wallDrag">
+
+          <div class="wall-track" id="wallTrackA">
+            <div class="wc-clip">
+              <div class="wc-bubble in">Buenas, quería pedir presupuesto para reformar una cocina.<span class="wc-time">10:12</span></div>
+              <div class="wc-bubble in">Estamos en la calle Alcalá, cerca de Ventas.<span class="wc-time">10:13</span></div>
+              <div class="wc-bubble in">La vivienda está vacía y podríamos empezar pronto.<span class="wc-time">10:15</span></div>
+              <div class="wc-bubble out">¡Perfecto! Te llamamos en un rato para concretar 🙌<span class="wc-time">10:19</span></div>
+            </div>
+            <div class="wc-clip">
+              <div class="wc-bubble in">Buenas, acabamos de comprar una vivienda en Pozuelo y queremos hacer una reforma integral antes de entrar.<span class="wc-time">19:40</span></div>
+              <div class="wc-bubble in">¿Podríais pasar a verla esta semana?<span class="wc-time">19:41</span></div>
+            </div>
+            <div class="wc-clip">
+              <div class="wc-bubble in">Necesitamos cambiar dos baños y el suelo del salón.<span class="wc-time">09:05</span></div>
+              <div class="wc-bubble in">Estamos en Alcobendas.<span class="wc-time">09:06</span></div>
+            </div>
+            <div class="wc-clip">
+              <div class="wc-bubble in">Hola, buscamos presupuesto para redistribuir un piso de unos 110 m² en Chamberí.<span class="wc-time">13:27</span></div>
+              <div class="wc-bubble out">Genial, ¿tenéis planos o lo vemos in situ?<span class="wc-time">13:35</span></div>
+              <div class="wc-bubble in">Lo vemos in situ mejor<span class="wc-time">13:36</span></div>
+            </div>
+            <!-- pasada duplicada, para el loop continuo -->
+            <div class="wc-clip" aria-hidden="true">
+              <div class="wc-bubble in">Buenas, quería pedir presupuesto para reformar una cocina.<span class="wc-time">10:12</span></div>
+              <div class="wc-bubble in">Estamos en la calle Alcalá, cerca de Ventas.<span class="wc-time">10:13</span></div>
+              <div class="wc-bubble in">La vivienda está vacía y podríamos empezar pronto.<span class="wc-time">10:15</span></div>
+              <div class="wc-bubble out">¡Perfecto! Te llamamos en un rato para concretar 🙌<span class="wc-time">10:19</span></div>
+            </div>
+            <div class="wc-clip" aria-hidden="true">
+              <div class="wc-bubble in">Buenas, acabamos de comprar una vivienda en Pozuelo y queremos hacer una reforma integral antes de entrar.<span class="wc-time">19:40</span></div>
+              <div class="wc-bubble in">¿Podríais pasar a verla esta semana?<span class="wc-time">19:41</span></div>
+            </div>
+            <div class="wc-clip" aria-hidden="true">
+              <div class="wc-bubble in">Necesitamos cambiar dos baños y el suelo del salón.<span class="wc-time">09:05</span></div>
+              <div class="wc-bubble in">Estamos en Alcobendas.<span class="wc-time">09:06</span></div>
+            </div>
+            <div class="wc-clip" aria-hidden="true">
+              <div class="wc-bubble in">Hola, buscamos presupuesto para redistribuir un piso de unos 110 m² en Chamberí.<span class="wc-time">13:27</span></div>
+              <div class="wc-bubble out">Genial, ¿tenéis planos o lo vemos in situ?<span class="wc-time">13:35</span></div>
+              <div class="wc-bubble in">Lo vemos in situ mejor<span class="wc-time">13:36</span></div>
+            </div>
+          </div>
+
+          <div class="wall-track row2" id="wallTrackB">
+            <div class="wc-clip">
+              <div class="wc-bubble in">Tenemos una casa en Majadahonda y queremos ampliar la cocina y abrirla al salón.<span class="wc-time">11:52</span></div>
+            </div>
+            <div class="wc-clip">
+              <div class="wc-bubble in">La vivienda está vacía y nos gustaría empezar la obra en octubre.<span class="wc-time">08:47</span></div>
+              <div class="wc-bubble in">¿Podéis llamarnos?<span class="wc-time">08:48</span></div>
+            </div>
+            <div class="wc-clip">
+              <div class="wc-bubble in">Buenos días, es para un baño pequeño, unos 4 m².<span class="wc-time">17:03</span></div>
+              <div class="wc-bubble in">¿Hacéis proyectos así de chicos?<span class="wc-time">17:04</span></div>
+              <div class="wc-bubble out">Claro que sí, sin problema 👍<span class="wc-time">17:20</span></div>
+            </div>
+            <div class="wc-clip">
+              <div class="wc-bubble in">Hola! Somos una pareja, piso en Getafe, 85 m², queremos reforma integral.<span class="wc-time">20:14</span></div>
+              <div class="wc-bubble in">Cuando podáis pasar a verlo genial, sin prisa.<span class="wc-time">20:15</span></div>
+            </div>
+            <!-- pasada duplicada, para el loop continuo -->
+            <div class="wc-clip" aria-hidden="true">
+              <div class="wc-bubble in">Tenemos una casa en Majadahonda y queremos ampliar la cocina y abrirla al salón.<span class="wc-time">11:52</span></div>
+            </div>
+            <div class="wc-clip" aria-hidden="true">
+              <div class="wc-bubble in">La vivienda está vacía y nos gustaría empezar la obra en octubre.<span class="wc-time">08:47</span></div>
+              <div class="wc-bubble in">¿Podéis llamarnos?<span class="wc-time">08:48</span></div>
+            </div>
+            <div class="wc-clip" aria-hidden="true">
+              <div class="wc-bubble in">Buenos días, es para un baño pequeño, unos 4 m².<span class="wc-time">17:03</span></div>
+              <div class="wc-bubble in">¿Hacéis proyectos así de chicos?<span class="wc-time">17:04</span></div>
+              <div class="wc-bubble out">Claro que sí, sin problema 👍<span class="wc-time">17:20</span></div>
+            </div>
+            <div class="wc-clip" aria-hidden="true">
+              <div class="wc-bubble in">Hola! Somos una pareja, piso en Getafe, 85 m², queremos reforma integral.<span class="wc-time">20:14</span></div>
+              <div class="wc-bubble in">Cuando podáis pasar a verlo genial, sin prisa.<span class="wc-time">20:15</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="casos" style="background:var(--mist-soft);border-block:1px solid var(--line-soft);">
+  <div class="container">
+    <div class="head" style="max-width:62rem;text-align:center;margin-inline:auto;">
+      <p class="hero-pill">Casos reales</p>
+      <h2 class="one-line">Reformas · Construcción · Arquitectura · Interiorismo</h2>
+    </div>
+
+    <div class="main-cases">
+      <div class="main-case">
+        <div class="mc-person">
+          <span class="mc-avatar mc-avatar-logo"><img src="assets/logos/pladuastur.png" alt="PladuAstur"></span>
+          <div>
+            <div class="mc-title">Paula</div>
+            <div class="mc-loc">PladuAstur</div>
+          </div>
+        </div>
+        <div class="mc-metrics-row">
+          <div class="mc-metric-col"><span class="num">3</span><span class="label">Reformas cerradas</span></div>
+          <div class="mc-metric-col"><span class="num">150.000 €</span><span class="label">En presupuestos cerrados</span></div>
+          <div class="mc-metric-col"><span class="num">1</span><span class="label">Mes para la primera reforma</span></div>
+        </div>
+        <p class="mc-quote">Pasó de depender de las recomendaciones a generar entre 3 y 5 reformas al mes en automático.</p>
+        <button type="button" class="video-link-btn" id="openVideoBtn">
+          <span class="play-ico">▶</span> Ver testimonio en vídeo
+        </button>
+      </div>
+
+      <div class="main-case">
+        <div class="mc-person">
+          <span class="mc-avatar mc-avatar-logo"><img src="assets/logos/impernova.png" alt="Impernova TPO"></span>
+          <div>
+            <div class="mc-title">Marc</div>
+            <div class="mc-loc">Impernova TPO</div>
+          </div>
+        </div>
+        <div class="mc-metrics-row">
+          <div class="mc-metric-col"><span class="num">2</span><span class="label">Proyectos grandes de impermeabilización</span></div>
+          <div class="mc-metric-col"><span class="num">3 meses</span><span class="label">Periodo</span></div>
+          <div class="mc-metric-col"><span class="num">350.000 €</span><span class="label">Facturación extra</span></div>
+        </div>
+        <p class="mc-quote">2 proyectos de impermeabilización de gran tamaño obligaron a Marc a contratar más personal.</p>
+        <button type="button" class="video-link-btn" id="openCaseBtn">
+          <span class="play-ico">🔍</span> Ver caso
+        </button>
+      </div>
+    </div>
+
+    <!-- Ejemplos ilustrativos, inventados a petición expresa del cliente (15-16 sept 2026).
+         NO son clientes reales ni datos confirmados — revisar/sustituir/eliminar antes
+         de publicar si no se quiere contenido ficticio en la página. -->
+    <div class="mini-wrap">
+      <div class="mini-viewport" id="miniViewport">
+        <div class="mini-drag" id="miniDrag">
+          <div class="mini-track" id="miniTrack">
+            <div class="mini-card">
+              <div class="mini-head">
+                <span class="mini-avatar" aria-hidden="true">MI</span>
+                <div>
+                  <div class="mini-name">Marta Ibáñez</div>
+                  <div class="mini-company">Norhabitat Reformas</div>
+                </div>
+              </div>
+              <p class="mini-text">Antes dependía del boca a boca. Ahora recibe <strong>+12 solicitudes de presupuesto al mes</strong> de forma constante.</p>
+            </div>
+            <div class="mini-card">
+              <div class="mini-head">
+                <span class="mini-avatar" aria-hidden="true">JM</span>
+                <div>
+                  <div class="mini-name">Javier Molina</div>
+                  <div class="mini-company">Cocinas Molina</div>
+                </div>
+              </div>
+              <p class="mini-text">Pasó de 1-2 presupuestos sueltos al mes a <strong>+8 reformas de cocina agendadas</strong> en 60 días.</p>
+            </div>
+            <div class="mini-card">
+              <div class="mini-head">
+                <span class="mini-avatar" aria-hidden="true">LC</span>
+                <div>
+                  <div class="mini-name">Laura Campos</div>
+                  <div class="mini-company">ObraLevante Construcciones</div>
+                </div>
+              </div>
+              <p class="mini-text">Cerró una reforma integral de <strong>+40.000 €</strong> que llegó directamente por WhatsApp en su primera semana con el sistema.</p>
+            </div>
+            <div class="mini-card">
+              <div class="mini-head">
+                <span class="mini-avatar" aria-hidden="true">DH</span>
+                <div>
+                  <div class="mini-name">Diego Herrera</div>
+                  <div class="mini-company">Edifica Norte</div>
+                </div>
+              </div>
+              <p class="mini-text">Cerró <strong>2 proyectos de obra nueva en los primeros 90 días</strong>, algo que antes le costaba conseguir en todo un año.</p>
+            </div>
+            <div class="mini-card">
+              <div class="mini-head">
+                <span class="mini-avatar" aria-hidden="true">SD</span>
+                <div>
+                  <div class="mini-name">Sara Domínguez</div>
+                  <div class="mini-company">Construye &amp; Habita</div>
+                </div>
+              </div>
+              <p class="mini-text">Su equipo pasó a cerrar reformas integrales de <strong>+35.000 € de media</strong> gracias a los leads cualificados del sistema.</p>
+            </div>
+            <div class="mini-card">
+              <div class="mini-head">
+                <span class="mini-avatar" aria-hidden="true">RC</span>
+                <div>
+                  <div class="mini-name">Rubén Castillo</div>
+                  <div class="mini-company">Construnova Obra Civil</div>
+                </div>
+              </div>
+              <p class="mini-text">Su equipo comercial gestiona ahora <strong>+25 presupuestos activos a la vez</strong>, sin perder seguimiento de ninguno.</p>
+            </div>
+            <div class="mini-card">
+              <div class="mini-head">
+                <span class="mini-avatar" aria-hidden="true">PA</span>
+                <div>
+                  <div class="mini-name">Paula</div>
+                  <div class="mini-company">PladuAstur</div>
+                </div>
+              </div>
+              <p class="mini-text">Cerró la rehabilitación integral de un edificio completo, un proyecto de <strong>+150.000 €</strong>, gestionado desde el primer contacto por WhatsApp.</p>
+            </div>
+            <div class="mini-card">
+              <div class="mini-head">
+                <span class="mini-avatar" aria-hidden="true">SB</span>
+                <div>
+                  <div class="mini-name">Stenton Baulieu</div>
+                  <div class="mini-company">Interiorismo</div>
+                </div>
+              </div>
+              <p class="mini-text">Pasó a cerrar proyectos de interiorismo de <strong>+18.000 € de media</strong>, con visitas ya agendadas desde el primer contacto.</p>
+            </div>
+            <!-- pasada duplicada, para el loop continuo -->
+            <div class="mini-card" aria-hidden="true">
+              <div class="mini-head">
+                <span class="mini-avatar" aria-hidden="true">MI</span>
+                <div>
+                  <div class="mini-name">Marta Ibáñez</div>
+                  <div class="mini-company">Norhabitat Reformas</div>
+                </div>
+              </div>
+              <p class="mini-text">Antes dependía del boca a boca. Ahora recibe <strong>+12 solicitudes de presupuesto al mes</strong> de forma constante.</p>
+            </div>
+            <div class="mini-card" aria-hidden="true">
+              <div class="mini-head">
+                <span class="mini-avatar" aria-hidden="true">JM</span>
+                <div>
+                  <div class="mini-name">Javier Molina</div>
+                  <div class="mini-company">Cocinas Molina</div>
+                </div>
+              </div>
+              <p class="mini-text">Pasó de 1-2 presupuestos sueltos al mes a <strong>+8 reformas de cocina agendadas</strong> en 60 días.</p>
+            </div>
+            <div class="mini-card" aria-hidden="true">
+              <div class="mini-head">
+                <span class="mini-avatar" aria-hidden="true">LC</span>
+                <div>
+                  <div class="mini-name">Laura Campos</div>
+                  <div class="mini-company">ObraLevante Construcciones</div>
+                </div>
+              </div>
+              <p class="mini-text">Cerró una reforma integral de <strong>+40.000 €</strong> que llegó directamente por WhatsApp en su primera semana con el sistema.</p>
+            </div>
+            <div class="mini-card" aria-hidden="true">
+              <div class="mini-head">
+                <span class="mini-avatar" aria-hidden="true">DH</span>
+                <div>
+                  <div class="mini-name">Diego Herrera</div>
+                  <div class="mini-company">Edifica Norte</div>
+                </div>
+              </div>
+              <p class="mini-text">Cerró <strong>2 proyectos de obra nueva en los primeros 90 días</strong>, algo que antes le costaba conseguir en todo un año.</p>
+            </div>
+            <div class="mini-card" aria-hidden="true">
+              <div class="mini-head">
+                <span class="mini-avatar" aria-hidden="true">SD</span>
+                <div>
+                  <div class="mini-name">Sara Domínguez</div>
+                  <div class="mini-company">Construye &amp; Habita</div>
+                </div>
+              </div>
+              <p class="mini-text">Su equipo pasó a cerrar reformas integrales de <strong>+35.000 € de media</strong> gracias a los leads cualificados del sistema.</p>
+            </div>
+            <div class="mini-card" aria-hidden="true">
+              <div class="mini-head">
+                <span class="mini-avatar" aria-hidden="true">RC</span>
+                <div>
+                  <div class="mini-name">Rubén Castillo</div>
+                  <div class="mini-company">Construnova Obra Civil</div>
+                </div>
+              </div>
+              <p class="mini-text">Su equipo comercial gestiona ahora <strong>+25 presupuestos activos a la vez</strong>, sin perder seguimiento de ninguno.</p>
+            </div>
+            <div class="mini-card" aria-hidden="true">
+              <div class="mini-head">
+                <span class="mini-avatar" aria-hidden="true">PA</span>
+                <div>
+                  <div class="mini-name">Paula</div>
+                  <div class="mini-company">PladuAstur</div>
+                </div>
+              </div>
+              <p class="mini-text">Cerró la rehabilitación integral de un edificio completo, un proyecto de <strong>+150.000 €</strong>, gestionado desde el primer contacto por WhatsApp.</p>
+            </div>
+            <div class="mini-card" aria-hidden="true">
+              <div class="mini-head">
+                <span class="mini-avatar" aria-hidden="true">SB</span>
+                <div>
+                  <div class="mini-name">Stenton Baulieu</div>
+                  <div class="mini-company">Interiorismo</div>
+                </div>
+              </div>
+              <p class="mini-text">Pasó a cerrar proyectos de interiorismo de <strong>+18.000 € de media</strong>, con visitas ya agendadas desde el primer contacto.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="results-wrap">
+      <div class="results-viewport" id="resultsViewport">
+        <div class="results-drag" id="resultsDrag">
+          <div class="results-track" id="resultsTrack">
+
+            <div class="rc-item">
+              <img src="assets/whatsapp/testimonio-ruben.png" alt="Rubén confirmando por WhatsApp 8 presupuestos realizados y 3 cierres" loading="lazy" decoding="async">
+              <p class="rc-tag">Rubén · 3 cierres, ~60.000 €</p>
+            </div>
+            <div class="rc-item">
+              <img src="assets/whatsapp/testimonio-pedro.png" alt="Pedro confirmando por WhatsApp una reforma integral de 95.000 euros aprobada" loading="lazy" decoding="async">
+              <p class="rc-tag">Pedro · 95.000 € aprobados</p>
+            </div>
+            <div class="rc-item">
+              <img src="assets/whatsapp/testimonio-alejandro.png" alt="Alejandro confirmando por WhatsApp 15 presupuestos realizados" loading="lazy" decoding="async">
+              <p class="rc-tag">Alejandro · 15 presupuestos realizados</p>
+            </div>
+            <div class="rc-item">
+              <img src="assets/whatsapp/testimonio-maria-perez.png" alt="Cliente confirmando por WhatsApp que María Pérez ha aceptado también el presupuesto" loading="lazy" decoding="async">
+              <p class="rc-tag">María Pérez · Presupuesto aceptado</p>
+            </div>
+            <div class="rc-item">
+              <img src="assets/whatsapp/testimonio-fran.png" alt="Fran confirmando por WhatsApp el cierre de 3 baños y una cocina" loading="lazy" decoding="async">
+              <p class="rc-tag">Fran · 3 baños y una cocina cerrados</p>
+            </div>
+            <div class="rc-item">
+              <img src="assets/whatsapp/testimonio-cliente-1.png" alt="Cliente confirmando por WhatsApp dos proyectos cerrados el mismo mes a través del sistema" loading="lazy" decoding="async">
+              <p class="rc-tag">Cliente · 2 proyectos cerrados el mismo mes</p>
+            </div>
+            <div class="rc-item">
+              <img src="assets/whatsapp/testimonio-otra-cocina.png" alt="Cliente confirmando por WhatsApp que ha salido otro presupuesto de cocina" loading="lazy" decoding="async">
+              <p class="rc-tag">Presupuesto de cocina aceptado</p>
+            </div>
+            <div class="rc-item">
+              <img src="assets/whatsapp/testimonio-calle-lerez.png" alt="Cliente confirmando por WhatsApp que le han aceptado el presupuesto de la calle Lerez" loading="lazy" decoding="async">
+              <p class="rc-tag">Calle Lerez · Presupuesto aceptado</p>
+            </div>
+            <!-- pasada duplicada, para el loop continuo -->
+            <div class="rc-item" aria-hidden="true">
+              <img src="assets/whatsapp/testimonio-ruben.png" alt="" loading="lazy" decoding="async">
+              <p class="rc-tag">Rubén · 3 cierres, ~60.000 €</p>
+            </div>
+            <div class="rc-item" aria-hidden="true">
+              <img src="assets/whatsapp/testimonio-pedro.png" alt="" loading="lazy" decoding="async">
+              <p class="rc-tag">Pedro · 95.000 € aprobados</p>
+            </div>
+            <div class="rc-item" aria-hidden="true">
+              <img src="assets/whatsapp/testimonio-alejandro.png" alt="" loading="lazy" decoding="async">
+              <p class="rc-tag">Alejandro · 15 presupuestos realizados</p>
+            </div>
+            <div class="rc-item" aria-hidden="true">
+              <img src="assets/whatsapp/testimonio-maria-perez.png" alt="" loading="lazy" decoding="async">
+              <p class="rc-tag">María Pérez · Presupuesto aceptado</p>
+            </div>
+            <div class="rc-item" aria-hidden="true">
+              <img src="assets/whatsapp/testimonio-fran.png" alt="" loading="lazy" decoding="async">
+              <p class="rc-tag">Fran · 3 baños y una cocina cerrados</p>
+            </div>
+            <div class="rc-item" aria-hidden="true">
+              <img src="assets/whatsapp/testimonio-cliente-1.png" alt="" loading="lazy" decoding="async">
+              <p class="rc-tag">Cliente · 2 proyectos cerrados el mismo mes</p>
+            </div>
+            <div class="rc-item" aria-hidden="true">
+              <img src="assets/whatsapp/testimonio-otra-cocina.png" alt="" loading="lazy" decoding="async">
+              <p class="rc-tag">Presupuesto de cocina aceptado</p>
+            </div>
+            <div class="rc-item" aria-hidden="true">
+              <img src="assets/whatsapp/testimonio-calle-lerez.png" alt="" loading="lazy" decoding="async">
+              <p class="rc-tag">Calle Lerez · Presupuesto aceptado</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="more-opinions"><a href="https://g.co/kgs/rncjZ59" target="_blank" rel="noopener">Ver más opiniones →</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta-wrap" id="book-a-call">
+  <div class="container">
+    <div class="final-cta">
+      <div class="inner">
+        <p class="eyebrow">15 presupuestos garantizados</p>
+        <h2>El siguiente paso es reservar tu plaza</h2>
+        <p>Todo lo que has visto salió del mismo sistema que instalamos contigo. Si es tu momento, el siguiente paso es sencillo.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://wa.me/34697529195?text=Reservamos%20la%20plaza" target="_blank" rel="noopener">Reservar mi plaza</a>
+          <a class="btn btn-ghost" href="https://wa.me/34697529195?text=Tenemos%20una%20duda%20antes%20de%20confirmar" target="_blank" rel="noopener">Resolver una duda por WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="container row">
+    <span>© Closeup Marketing — +Reformas System</span>
+    <span><a href="mailto:hello@closeupmarketing.com">hello@closeupmarketing.com</a> · <a href="https://www.instagram.com/closeup.marketing/" target="_blank" rel="noopener">Instagram</a></span>
+  </div>
+</footer>
+
+<div class="video-modal" id="videoModal" hidden>
+  <div class="video-modal-backdrop" id="videoBackdrop"></div>
+  <div class="video-modal-panel" role="dialog" aria-modal="true" aria-label="Testimonio en vídeo de Paula">
+    <button type="button" class="video-modal-close" id="closeVideoBtn" aria-label="Cerrar vídeo">✕</button>
+    <video id="modalVideo" controls playsinline></video>
+  </div>
+</div>
+
+<div class="case-modal" id="caseModal" hidden>
+  <div class="case-modal-backdrop" id="caseBackdrop"></div>
+  <div class="case-modal-panel" role="dialog" aria-modal="true" aria-label="Caso de Impernova TPO">
+    <button type="button" class="case-modal-close" id="closeCaseBtn" aria-label="Cerrar caso">✕</button>
+    <p class="case-modal-text">2 proyectos de impermeabilización de gran tamaño obligaron a Marc a contratar más personal.</p>
+    <div class="case-modal-evidence">
+      <img src="assets/contratacion/impernova.png" alt="Marc, CEO de Impernova, confirmando por WhatsApp que ha cerrado la contratación de un nuevo trabajador" loading="lazy" decoding="async">
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  // ---- fábrica genérica: carril con avance automático + pausa + arrastre ----
+  function makeDraggableMarquee(viewportId, dragId){
+    var viewport = document.getElementById(viewportId);
+    var drag = document.getElementById(dragId);
+    if(!viewport || !drag) return;
+    var tracks = drag.querySelectorAll('[id*="Track"]');
+    var dragging = false, startX = 0, currentX = 0;
+
+    function pause(){ tracks.forEach(function(t){ t.style.animationPlayState = 'paused'; }); }
+    function resume(){ tracks.forEach(function(t){ t.style.animationPlayState = 'running'; }); }
+
+    function onDown(e){
+      dragging = true;
+      var x = e.touches ? e.touches[0].clientX : e.clientX;
+      startX = x - currentX;
+      drag.style.transition = 'none';
+      pause();
+      viewport.classList.add('dragging');
+    }
+    function onMove(e){
+      if(!dragging) return;
+      var x = e.touches ? e.touches[0].clientX : e.clientX;
+      currentX = x - startX;
+      drag.style.transform = 'translateX(' + currentX + 'px)';
+    }
+    function onUp(){
+      if(!dragging) return;
+      dragging = false;
+      viewport.classList.remove('dragging');
+      drag.style.transition = 'transform .45s ease';
+      drag.style.transform = 'translateX(0px)';
+      currentX = 0;
+      setTimeout(resume, 450);
+    }
+
+    viewport.addEventListener('pointerdown', onDown);
+    window.addEventListener('pointermove', onMove);
+    window.addEventListener('pointerup', onUp);
+    viewport.addEventListener('touchstart', onDown, {passive:true});
+    viewport.addEventListener('touchmove', onMove, {passive:true});
+    viewport.addEventListener('touchend', onUp);
+    viewport.addEventListener('mouseenter', pause);
+    viewport.addEventListener('mouseleave', function(){ if(!dragging) resume(); });
+  }
+
+  makeDraggableMarquee('wallViewport', 'wallDrag');
+  makeDraggableMarquee('resultsViewport', 'resultsDrag');
+  makeDraggableMarquee('miniViewport', 'miniDrag');
+
+  // ---- modal de vídeo (carga diferida) ----
+  var openBtn = document.getElementById('openVideoBtn');
+  var modal = document.getElementById('videoModal');
+  var closeBtn = document.getElementById('closeVideoBtn');
+  var backdrop = document.getElementById('videoBackdrop');
+  var video = document.getElementById('modalVideo');
+  var VIDEO_SRC = 'assets/video/testimonio-paula.mp4';
+
+  function openModal(){
+    video.src = VIDEO_SRC;
+    modal.hidden = false;
+    closeBtn.focus();
+    document.addEventListener('keydown', onKeydown);
+  }
+  function closeModal(){
+    video.pause();
+    video.removeAttribute('src');
+    video.load();
+    modal.hidden = true;
+    document.removeEventListener('keydown', onKeydown);
+    if(openBtn) openBtn.focus();
+  }
+  function onKeydown(e){ if(e.key === 'Escape') closeModal(); }
+
+  if(openBtn) openBtn.addEventListener('click', openModal);
+  if(closeBtn) closeBtn.addEventListener('click', closeModal);
+  if(backdrop) backdrop.addEventListener('click', closeModal);
+
+  // ---- modal de caso (Impernova) ----
+  var openCaseBtn = document.getElementById('openCaseBtn');
+  var caseModal = document.getElementById('caseModal');
+  var closeCaseBtn = document.getElementById('closeCaseBtn');
+  var caseBackdrop = document.getElementById('caseBackdrop');
+
+  function openCaseModal(){
+    caseModal.hidden = false;
+    closeCaseBtn.focus();
+    document.addEventListener('keydown', onCaseKeydown);
+  }
+  function closeCaseModal(){
+    caseModal.hidden = true;
+    document.removeEventListener('keydown', onCaseKeydown);
+    if(openCaseBtn) openCaseBtn.focus();
+  }
+  function onCaseKeydown(e){ if(e.key === 'Escape') closeCaseModal(); }
+
+  if(openCaseBtn) openCaseBtn.addEventListener('click', openCaseModal);
+  if(closeCaseBtn) closeCaseBtn.addEventListener('click', closeCaseModal);
+  if(caseBackdrop) caseBackdrop.addEventListener('click', closeCaseModal);
+})();
+</script>
+
+</body>
+</html>
